@@ -1,0 +1,27 @@
+services:
+  python-app:
+    build: .
+    container_name: semana08
+    volumes:
+      - ./data-contenedor:/app/starter/figuras
+  ejercicio2:
+    build: .
+    container_name: semana08-ejercicio2
+    command: ["python3", "./plantilla-ejercicio2/explorar_relaciones.py"]
+    volumes:
+      - ./data-contenedor/ejercicio2:/app/plantilla-ejercicio2/figuras
+
+  exportar-obt:
+    build: .
+    container_name: semana08-exportar-obt
+    command: ["python3", "./plantilla-eda/exportar_obt.py"]
+    env_file: ../../../PSet2-Ecobici-Pipeline/.env
+    volumes:
+      - ./plantilla-eda/datos:/app/plantilla-eda/datos
+  ejercicio3:
+    build: .
+    container_name: semana08-ejercicio3
+    command: ["python3", "./plantilla-eda/explorar_proyecto.py"]
+    volumes:
+      - ./plantilla-eda/datos:/app/plantilla-eda/datos
+      - ./data-contenedor/ejercicio3:/app/plantilla-eda/figuras

@@ -18,3 +18,6 @@ data/processed/
 
 # Logs
 *.log
+
+# Muestra de la OBT del proyecto exportada para la Semana 8
+laboratorios/semana-08-sesion-02/plantilla-eda/datos/

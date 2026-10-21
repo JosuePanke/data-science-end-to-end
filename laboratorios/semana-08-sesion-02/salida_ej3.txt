@@ -1,0 +1,183 @@
+ Container semana-08-sesion-02-ejercicio3-run-614de0dc5fb9 Creating 
+ Container semana-08-sesion-02-ejercicio3-run-614de0dc5fb9 Created 
+Analisis exploratorio del proyecto
+Filas y columnas: (200000, 48)
+estacion_key                             object
+fecha_key                                 int64
+franja_key                                int64
+salidas                                   int64
+llegadas                                  int64
+flujo_neto                                int64
+estacion_codigo                          object
+nombre                                   object
+latitud                                 float64
+longitud                                float64
+capacidad_actual                          int64
+tamano                                   object
+es_estacion_doble                          bool
+en_catalogo_actual                         bool
+fecha                                    object
+anio                                      int64
+mes                                       int64
+dia_semana                                int64
+nombre_dia                               object
+es_fin_de_semana                           bool
+es_feriado                                 bool
+es_dia_laboral                             bool
+hora                                      int64
+etiqueta                                 object
+periodo_del_dia                          object
+es_hora_pico                               bool
+bicis_promedio                          float64
+bicis_minimo                            float64
+anclajes_promedio                       float64
+ocupacion_promedio                      float64
+pct_tiempo_vacia                        float64
+pct_tiempo_llena                        float64
+tuvo_estado_critico                     float64
+capacidad_en_snapshot                   float64
+n_snapshots                             float64
+salidas_lag_15m                         float64
+llegadas_lag_15m                        float64
+salidas_ultima_hora                     float64
+llegadas_ultima_hora                    float64
+salidas_mismo_momento_ayer              float64
+salidas_mismo_momento_semana_pasada     float64
+llegadas_mismo_momento_semana_pasada    float64
+y_salidas_prox_30m                      float64
+y_llegadas_prox_30m                     float64
+y_salidas_prox_60m                      float64
+y_llegadas_prox_60m                     float64
+y_flujo_neto_prox_60m                   float64
+construido_en                            object
+dtype: object
+estacion_key                                 0
+fecha_key                                    0
+franja_key                                   0
+salidas                                      0
+llegadas                                     0
+flujo_neto                                   0
+estacion_codigo                              0
+nombre                                       0
+latitud                                      0
+longitud                                     0
+capacidad_actual                             0
+tamano                                       0
+es_estacion_doble                            0
+en_catalogo_actual                           0
+fecha                                        0
+anio                                         0
+mes                                          0
+dia_semana                                   0
+nombre_dia                                   0
+es_fin_de_semana                             0
+es_feriado                                   0
+es_dia_laboral                               0
+hora                                         0
+etiqueta                                     0
+periodo_del_dia                              0
+es_hora_pico                                 0
+bicis_promedio                          200000
+bicis_minimo                            200000
+anclajes_promedio                       200000
+ocupacion_promedio                      200000
+pct_tiempo_vacia                        200000
+pct_tiempo_llena                        200000
+tuvo_estado_critico                     200000
+capacidad_en_snapshot                   200000
+n_snapshots                             200000
+salidas_lag_15m                             52
+llegadas_lag_15m                            52
+salidas_ultima_hora                         52
+llegadas_ultima_hora                        52
+salidas_mismo_momento_ayer                6427
+salidas_mismo_momento_semana_pasada      45183
+llegadas_mismo_momento_semana_pasada     45183
+y_salidas_prox_30m                          71
+y_llegadas_prox_30m                         71
+y_salidas_prox_60m                          71
+y_llegadas_prox_60m                         71
+y_flujo_neto_prox_60m                       71
+construido_en                                0
+dtype: int64
+         fecha_key  franja_key  ...  y_llegadas_prox_60m  y_flujo_neto_prox_60m
+count    200000.00   200000.00  ...            199929.00              199929.00
+mean   20260815.99       47.48  ...                 2.94                   0.00
+std           8.95       27.72  ...                 4.60                   3.69
+min    20260801.00        0.00  ...                 0.00                -164.00
+25%    20260808.00       23.00  ...                 0.00                  -1.00
+50%    20260816.00       47.00  ...                 1.00                   0.00
+75%    20260824.00       72.00  ...                 4.00                   1.00
+max    20260831.00       95.00  ...               205.00                 181.00
+
+[8 rows x 33 columns]
+Q1: 0.0 Q3: 4.0 IQR: 4.0 Limite superior: 10.0
+Atipicos de y_salidas_prox_60m segun IQR: 10569
+    estacion_codigo       fecha  ... salidas_ultima_hora  y_salidas_prox_60m
+51              397  2026-08-18  ...                 4.0                12.0
+99              028  2026-08-01  ...                 7.0                17.0
+100             028  2026-08-01  ...                10.0                12.0
+101             028  2026-08-01  ...                 8.0                22.0
+109             028  2026-08-02  ...                 1.0                11.0
+110             028  2026-08-02  ...                28.0                12.0
+120             028  2026-08-03  ...                 6.0                19.0
+122             028  2026-08-03  ...                11.0                11.0
+123             028  2026-08-03  ...                12.0                23.0
+124             028  2026-08-03  ...                21.0                28.0
+
+[10 rows x 5 columns]
+es_dia_laboral  False  True 
+hora                        
+0                0.05   0.03
+1                0.00   0.00
+2                0.00   0.00
+3                0.00   0.00
+4                0.17   0.38
+5                0.59   1.88
+6                1.15   4.12
+7                2.25   6.37
+8                3.12   5.96
+9                4.18   4.14
+10               4.58   3.42
+11               4.96   3.43
+12               4.85   4.15
+13               4.70   5.27
+14               4.07   5.64
+15               3.53   5.40
+16               3.06   5.88
+17               3.06   6.49
+18               2.52   5.62
+19               1.96   3.98
+20               1.54   2.84
+21               1.28   1.97
+22               0.94   1.27
+23               0.58   0.61
+Franjas con objetivo 0: 72554 de 199929
+Porcentaje con objetivo 0: 36.28
+Filas con objetivo vacio: 71
+Filas sin rezago de la semana pasada: 45183
+Porcentaje de filas con disponibilidad GBFS: 0.0
+                    min         max   count
+n_snapshots                                
+False        2026-08-01  2026-08-31  200000
+Empty DataFrame
+Columns: [mean, count]
+Index: []
+y_salidas_prox_60m                     1.000
+y_salidas_prox_30m                     0.894
+y_llegadas_prox_60m                    0.658
+salidas_ultima_hora                    0.637
+salidas                                0.578
+llegadas_ultima_hora                   0.555
+salidas_lag_15m                        0.546
+salidas_mismo_momento_semana_pasada    0.536
+llegadas                               0.509
+salidas_mismo_momento_ayer             0.440
+hora                                   0.161
+capacidad_actual                       0.158
+bicis_promedio                           NaN
+pct_tiempo_vacia                         NaN
+Name: y_salidas_prox_60m, dtype: float64
+                    mean   count
+en_catalogo_actual              
+True                2.94  199929
